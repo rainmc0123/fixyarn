@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Membuat direktori untuk keyrings jika belum ada
-sudo mkdir -p /etc/apt/keyrings
+
+echo -e "\033[34m𝗣𝗥𝗢𝗦𝗘𝗦, 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗗𝗜𝗧𝗨𝗡𝗚𝗚𝗨\033[0m"
+sudo mkdir -p /etc/apt/keyrings /dev/null 2>&1
 
 # Mengunduh dan menyimpan key GPG NodeSource
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
@@ -21,5 +23,6 @@ cd /var/www/pterodactyl
 
 # Menginstal dependensi dan membangun aplikasi
 yarn > /dev/null 2>&1
-echo -e "\033[34mWAIT INI MUNGKIN SEDIKIT LAMA\033[0m"
+echo -e "\033[34m𝗪𝗔𝗜𝗧 𝗜𝗡𝗜 𝗔𝗞𝗔𝗡 𝗦𝗘𝗗𝗜𝗞𝗜𝗧 𝗟𝗔𝗠𝗔\033[0m"
 yarn build:production > /dev/null 2>&1
+echo -e "\033[34m𝗕𝗘𝗥𝗛𝗔𝗦𝗜𝗟, 𝗖𝗢𝗕𝗔𝗟𝗔𝗛 𝗗𝗘𝗡𝗚𝗔𝗡  yarn\033[0m"
