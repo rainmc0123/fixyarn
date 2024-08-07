@@ -3,7 +3,7 @@
 # Membuat direktori untuk keyrings jika belum ada
 
 echo -e "\033[34m𝗣𝗥𝗢𝗦𝗘𝗦, 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗗𝗜𝗧𝗨𝗡𝗚𝗚𝗨\033[0m"
-sudo mkdir -p /etc/apt/keyrings > /dev/null 2>&1
+sudo mkdir -p /etc/apt/keyrings >
 
 # Mengunduh dan menyimpan key GPG NodeSource
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
